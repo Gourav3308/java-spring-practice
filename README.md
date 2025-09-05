@@ -1,62 +1,57 @@
-# 🚀 Java & Spring Practice Repository  
+# Advanced Java & Spring Core Practice
 
-This repository contains my **hands-on practice programs** in **Advanced Java** and **Spring Framework**.  
-All examples are coded and tested in **Eclipse IDE** and **Spring Tool Suite (STS)**.  
-
----
-
-## 📂 Contents  
-Some of the key topics covered in this repository:  
-
-- ✅ **Core Spring**:  
-  - Dependency Injection (Constructor, Setter, XML, Annotation-based)  
-  - Autowiring  
-  - Bean Lifecycle & Aware Interfaces  
-  - ApplicationContext & BeanFactory  
-
-- ✅ **Spring JDBC**:  
-  - JDBC Templates  
-  - Batch JDBC  
-  - ResultSet Handling  
-  - Transaction Management  
-
-- ✅ **Logging**:  
-  - Log4j  
-  - Logback  
-  - SLF4J  
-
-- ✅ **Design Patterns & Utilities**:  
-  - DAO Design Pattern  
-  - Connection Pooling  
-
-- ✅ **Servlets & JSP**:  
-  - Basic Servlet-JSP Login Application  
-  - JSTL Usage  
+This repository contains my practice programs for **Advanced Java** and **Spring Core** concepts.  
+Developed using **Eclipse IDE** and **Spring Tool Suite (STS)**.
 
 ---
 
-## 🛠️ Tech Stack
-- Java (Core & Advanced)  
-- Spring Framework  
-- JDBC  
-- Log4j / SLF4J / Logback  
-- Eclipse IDE & Spring Tool Suite  
+## 📂 Contents
+- **Spring Core Basics**
+  - Bean configuration using XML and Annotations
+  - Autowiring (Constructor, Setter, XML, Annotation)
+  - Bean lifecycle methods
+  - Aware interfaces
+
+- **Dependency Injection**
+  - Constructor & Setter Injection
+  - Circular dependency examples
+  - Collections injection (List, Map, Properties)
+
+- **Spring Logging & Utilities**
+  - Log4j, SLF4J, Logback examples
+  - Calculator logging
+  - Java logging API
+
+- **Spring JDBC**
+  - JDBC template examples
+  - Batch JDBC
+  - ResultSet handling
+  - Transaction Management
+
+- **Design Patterns**
+  - DAO Design Pattern
+  - Connection pooling examples
 
 ---
 
-## 📖 About  
-This repo serves as a **learning portfolio** of my journey exploring Java & Spring.  
-It includes small modular examples that helped me understand the fundamentals of:  
-- Spring Core concepts  
-- Enterprise Java (JDBC, Servlets, JSP)  
-- Logging & Transaction Management  
+## 🚀 Technologies Used
+- **Java (JDK 8+)**
+- **Spring Core Framework**
+- **JDBC**
+- **Maven**
+- **Eclipse IDE / STS**
 
 ---
 
-## 🙌 Acknowledgement  
-Thanks to **TechnoHacks EduTech** and online resources which guided me during my practice journey.  
+## 🎯 Purpose
+This repository is created as part of my learning journey to understand:
+- Spring Core fundamentals
+- Dependency Injection and Autowiring
+- Bean lifecycle and scopes
+- Database handling using Spring JDBC
+- Logging frameworks integration
 
 ---
 
-## 🏷️ Tags  
-`Java` `Spring` `SpringBoot` `AdvancedJava` `Practice` `Learning`  
+## 📝 Note
+This repo is purely for **learning & practice**. Not optimized for production use.
