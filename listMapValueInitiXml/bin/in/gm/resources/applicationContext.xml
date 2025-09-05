@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="location" value="/in/gm/properies/student.properties" />
+</bean>
+       
+
+     
+    <bean class="in.gm.beans.Student" id="st">
+    
+    <property name="name" value="${Student.name}" />
+    <property name="rollno" value="${Student.rollno}" />
+    <property name="subject">
+     
+      <list>
+        <value>${Student.subject}</value>
+      </list>
+    </property>
+         
+          
+          
+      <!--    
+           <property name="submarks">
+          <map>
+           <entry key="c" value="${Student.submarks.c}"/>
+           <entry key="cpp" value="${Student.submarks.cpp}"/>
+           <entry key="java" value="${Student.submarks.java}"/>
+          
+          
+          </map>
+          
+          </property>
+   
+ -->  
+    
+    
+    </bean>
+
+</beans>

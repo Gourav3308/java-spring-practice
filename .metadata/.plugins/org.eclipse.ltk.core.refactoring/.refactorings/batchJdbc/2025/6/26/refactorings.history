@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;StVsPpSt.java&apos; to &apos;batchJdbc/src/in.gm.main&apos;&#x0D;&#x0A;- Original project: &apos;batchJdbc&apos;&#x0D;&#x0A;- Destination element: &apos;batchJdbc/src/in.gm.main&apos;&#x0D;&#x0A;- Original element: &apos;in.gm.main.StVsPpSt.java&apos;" description="Copy compilation unit" destination="/src&lt;in.gm.main" element1="/src&lt;in.gm.main{StVsPpSt.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1750770431696" units="1" version="1.0"/>
+</session>

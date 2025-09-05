@@ -1,0 +1,6 @@
+package in.gm.dao;
+
+public interface InsertDao {
+
+	public void insertion();
+}

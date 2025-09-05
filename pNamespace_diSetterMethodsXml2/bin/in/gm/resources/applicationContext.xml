@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="in.gm.beans.Address" id="add"
+    
+     p:city="Forbesganj" 
+     p:wardno="05"/>
+   
+     
+
+  
+   <bean class="in.gm.beans.Student" id="std"
+   p:name="Gourav"
+   p:rollno="061"
+   p:address-ref="add"/>
+   
+  
+
+</beans>

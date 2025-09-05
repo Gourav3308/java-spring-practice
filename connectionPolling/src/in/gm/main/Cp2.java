@@ -1,0 +1,80 @@
+package in.gm.main;
+
+import java.lang.management.ManagementFactory;
+import java.sql.Connection;
+
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+
+public class Cp2 {
+	public static void main(String[] args) {
+		
+		HikariConfig config = new HikariConfig();
+		config.setJdbcUrl("jdbc:mysql://localhost:3306/newjdbc");
+		config.setUsername("root");
+		config.setPassword("Sonu@12345");
+		config.setMaximumPoolSize(10);
+		
+		HikariDataSource dataSource = new HikariDataSource(config);
+		
+		MBeanServer mBeanServer=null;
+		ObjectName poolObjectName=null;
+		
+		try(
+				Connection con1 = dataSource.getConnection();
+				Connection con2 = dataSource.getConnection();
+				Connection con3 = dataSource.getConnection();
+				Connection con4 = dataSource.getConnection();
+				Connection con5 = dataSource.getConnection();
+				Connection con6 = dataSource.getConnection();
+			)
+		{
+			// register HikariCP pool as an MBean
+			mBeanServer = ManagementFactory.getPlatformMBeanServer();
+			poolObjectName = new ObjectName("com.zaxxer.hikari:type=Pool("+dataSource.getPoolName()+")");
+			mBeanServer.registerMBean(dataSource.getHikariPoolMXBean(), poolObjectName);
+			
+			// access the pool statistics using JMX attributes
+			int activeConnection = (int) mBeanServer.getAttribute(poolObjectName, "ActiveConnections");
+			int idleConnection = (int) mBeanServer.getAttribute(poolObjectName, "IdleConnections");
+			int totalConnections = activeConnection + idleConnection;
+			
+			System.out.println("Total Connection : "+totalConnections);
+			System.out.println("Active Connection : "+activeConnection);
+			System.out.println("Idle Connection : "+idleConnection);
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		try(
+				Connection con7 = dataSource.getConnection();
+				Connection con8 = dataSource.getConnection();
+				Connection con9 = dataSource.getConnection();
+				Connection con10 = dataSource.getConnection();
+				Connection con11 = dataSource.getConnection();
+			)
+		{
+			// access the pool statistics using JMX attributes
+			int activeConnection = (int) mBeanServer.getAttribute(poolObjectName, "ActiveConnections");
+			int idleConnection = (int) mBeanServer.getAttribute(poolObjectName, "IdleConnections");
+			int totalConnections = activeConnection + idleConnection;
+			
+			System.out.println("Total Connection : "+totalConnections);
+			System.out.println("Active Connection : "+activeConnection);
+			System.out.println("Idle Connection : "+idleConnection);
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+
+}

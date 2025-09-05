@@ -1,0 +1,59 @@
+package transactionManagement;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class Transaction {
+	public static void main(String[] args) {
+		
+		try {
+			
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/newjdbc", "root", "Sonu@12345");
+			
+			con.setAutoCommit(false);
+			
+			try {
+				
+				PreparedStatement ps1 = con.prepareStatement("insert into items values (?,?,?");
+				PreparedStatement ps2 = con.prepareStatement("insert into items values (?,?,?");
+				PreparedStatement ps3 = con.prepareStatement("insert into items values (?,?,?");
+				
+				ps1.setInt(1, 1);
+				ps1.setString(2, "Shirt");
+				ps1.setInt(3, 1000);
+				
+				ps2.setInt(1, 2);
+				ps2.setString(2, "Jeans");
+				ps2.setInt(3, 1500);
+				
+				ps3.setInt(1, 3);
+				ps3.setString(2, "top");
+				ps3.setInt(3, 900);
+				
+				int count1=ps1.executeUpdate();
+				int count2=ps2.executeUpdate();
+				int count3=ps3.executeUpdate();
+				
+				if (count1>0 && count2>0 && count3>0) {
+					
+					con.commit();
+					System.out.println("Success");
+				} else {
+
+					con.rollback();
+					System.out.println("Fail");
+					
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Select.java&apos; to &apos;stVsPpStLogin/src&apos;&#x0D;&#x0A;- Original project: &apos;resultSet&apos;&#x0D;&#x0A;- Destination element: &apos;stVsPpStLogin/src&apos;&#x0D;&#x0A;- Original element: &apos;resultSet.Select.java&apos;" description="Copy compilation unit" destination="=stVsPpStLogin/src" element1="/src&lt;resultSet{Select.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1750761566675" units="1" version="1.0"/>
+</session>

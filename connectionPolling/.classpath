@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-22">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/goura/Videos/Downloads/hikariCP_jars_lyst9991/hikariCP/HikariCP-5.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/goura/Videos/Downloads/hikariCP_jars_lyst9991/hikariCP/slf4j-api-2.0.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/goura/Videos/Downloads/mysql_connector_java_8011jar_lyst6875.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

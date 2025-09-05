@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="in.gm.beans.Address" id="add" autowire-candidate="false">
+   
+   <constructor-arg value="Forbesganj"/>
+    <constructor-arg value="05"/>
+     
+   </bean>
+   
+   
+    <bean class="in.gm.beans.Address" id="add2" autowire-candidate="false">
+   
+    <constructor-arg value="Bathnaha"/>
+    <constructor-arg value="04"/>
+     
+   </bean>
+
+
+
+  <bean class="in.gm.beans.Address" id="add3">
+   
+   <constructor-arg value="pkd"/>
+    <constructor-arg value="07"/>
+     
+   </bean>
+
+   <bean class="in.gm.beans.Student" id="std" autowire="constructor">
+   
+   <constructor-arg value="Sonu"/>
+   <constructor-arg value="061"/>
+    
+   </bean>
+
+</beans>
